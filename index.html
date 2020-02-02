@@ -8,33 +8,33 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-<h1 class="kanban-heading kanban-heading--main">Kanban Boards Application</h1>
+<h1 class="kanban-heading">Kanban Boards Application</h1>
 
 <main class="kanban container">
-  <section class="datatable">
+  <section class="form">
     <h2>Create a new task</h2>
     <form
-        method="POST"
-        action="http://localhost:8080/test1/task/createTask"
-        data-task-add-form
-        class="datatable__row datatable__row--add"
+      method="POST"
+      action="http://localhost:8080/test1/task/createTask"
+      data-task-add-form
+      class="form__container"
     >
-      <fieldset class="datatable__row-section datatable__row-section--input-section">
-        <label class="datatable__input-label">
+      <fieldset class="form__fieldest">
+        <label class="input-label">
           Title
         </label>
         <input type="text" name="title" placeholder="Enter the task title" required minlength="3">
       </fieldset>
 
-      <fieldset class="datatable__row-section datatable__row-section--input-section">
-        <label class="datatable__input-label">
+      <fieldset class="form__fieldest">
+        <label class="input-label">
           Description
         </label>
         <textarea name="content" placeholder="Enter a description of the task" required minlength="3"></textarea>
       </fieldset>
 
-      <fieldset class="datatable__row-section datatable__row-section--button-section">
-        <button type="submit" data-task-add-button class="datatable__button">Add a task</button>
+      <fieldset class="form__fieldest button-section">
+        <button type="submit" data-task-add-button class="form__button">Add a task</button>
       </fieldset>
     </form>
   </section>
@@ -46,24 +46,24 @@
 
 <div class="template" data-datatable-row-template>
   <form class="datatable__row" data-task-id="0">
-    <fieldset class="datatable__row-section datatable__row-section--input-section" data-task-name-section>
-      <label class="datatable__input-label">
+    <fieldset class="datatable__row-section" data-task-name-section>
+      <label class="input-label">
         Title
       </label>
       <input type="text" name="title" placeholder="Enter the task title" data-task-name-input required minlength="3">
       <p class="datatable__field-value" data-task-name-paragraph></p>
     </fieldset>
 
-    <fieldset class="datatable__row-section datatable__row-section--input-section" data-task-content-section>
-      <label class="datatable__input-label">
+    <fieldset class="datatable__row-section" data-task-content-section>
+      <label class="input-label">
         Description
       </label>
       <textarea name="title" placeholder="Enter a description of the task" data-task-content-input required minlength="3"></textarea>
       <p class="datatable__field-value" data-task-content-paragraph></p>
     </fieldset>
 
-    <fieldset class="datatable__row-section datatable__row-section--button-section">
-      <button type="button" data-task-submit-update-button class="datatable__button datatable__button--editing ">Submit update</button>
+    <fieldset class="datatable__row-section button-section">
+      <button type="button" data-task-submit-update-button class="datatable__button datatable__button--editing">Submit update</button>
       <button type="button" data-task-edit-abort-button class="datatable__button datatable__button--editing">Abort update</button>
       <button type="button" data-task-edit-button class="datatable__button">Edit</button>
       <button type="button" data-task-delete-button class="datatable__button">Delete</button>
